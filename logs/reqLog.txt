@@ -17,3 +17,7 @@
 20230610	15:37:41	16b4e12e-513b-4a33-9c17-43a1bebd5770	GET	undefined	/new-page
 20230610	15:37:41	442ec894-5330-49f9-968e-4932aadef7e3	GET	undefined	/css/style.css
 20230610	15:37:41	9e43869b-22af-42e3-9aa4-0684fc7d965b	GET	undefined	/img/Image1.jpg
+20230610	16:04:25	39f498d1-fb62-4986-99f7-250dbc9ebfb6	GET	undefined	/new-page
+20230610	16:05:17	1e475d96-0f74-4d9c-b058-632cbff755de	GET	undefined	/new-page
+20230610	16:05:17	01202660-59d4-4772-877d-36befff8f57b	GET	undefined	/css/style.css
+20230610	16:05:17	c5947ef6-1f04-4ad7-a8d0-7e7cbf6f6f09	GET	undefined	/img/Image1.jpg

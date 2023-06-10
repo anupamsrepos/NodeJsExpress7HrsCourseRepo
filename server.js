@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cors = require('cors');
-const {logger} = require('./middleware/logEvents')
+const {logger} = require('./middleware/logEvents');
+const errorHandler = require('./middleware/errorHandler');
 
 const PORT = process.env.PORT || 3500;
 
@@ -44,14 +45,24 @@ app.get('/old-page(.html)?', (req, res) => {
     res.redirect(301, '/new-page.html');
 });
 
-app.get('/*', (req, res) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+//app.use('/')
+
+//This should be at the end of all request http verb
+//If none of the above HttpVerbs works then come here
+app.all('/*', (req, res) => {
+    res.status(404);
+    if(req.accepts('html')){
+        res.sendFile(path.join(__dirname, 'views', '404.html'));
+    }
+    else if(req.accepts('json')){
+        res.json({error: "404 Not found"});
+    }
+    else{
+        res.type('txt').send('404 Not Found');
+    }    
 })
 
-app.use(function(err, req, res, next){
-    console.error(err.stack);
-    res.status(500).send(err.message);
-})
+app.use(errorHandler);
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
