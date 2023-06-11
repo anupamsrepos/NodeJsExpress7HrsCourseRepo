@@ -31,21 +31,16 @@ app.use(cors(corsOptions));
 //built-in middleware
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('^/$|/index(.html)?', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'Index.html'));
-});
+//server static files
+app.use('/', express.static(path.join(__dirname, '/public')));
+app.use('/subdir', express.static(path.join(__dirname, '/public')));
 
-app.get('/new-page(.html)?', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'new-page.html'));
-});
+//app.use support regex
+//app.use('/*', require(''))
 
-app.get('/old-page(.html)?', (req, res) => {
-    res.redirect(301, '/new-page.html');
-});
-
-//app.use('/')
+app.use('/', require('./routers/root'));
+app.use('/subdir', require('./routers/subdir'));
 
 //This should be at the end of all request http verb
 //If none of the above HttpVerbs works then come here
