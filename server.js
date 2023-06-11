@@ -36,11 +36,10 @@ app.use(express.json());
 app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/subdir', express.static(path.join(__dirname, '/public')));
 
-//app.use support regex
-//app.use('/*', require(''))
-
+//routes
 app.use('/', require('./routers/root'));
 app.use('/subdir', require('./routers/subdir'));
+app.use('/employees', require('./routers/api/employees'));
 
 //This should be at the end of all request http verb
 //If none of the above HttpVerbs works then come here

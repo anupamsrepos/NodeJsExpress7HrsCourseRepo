@@ -45,3 +45,13 @@
 20230611	09:48:08	af1504bf-9040-49cf-ae04-5816eb235471	GET	undefined	/subdir
 20230611	09:48:08	24f3a3f3-4b5a-46f5-9e63-654bac2d01a3	GET	undefined	/subdir/
 20230611	09:48:08	8d7de2e8-1580-4916-9e15-9b3e7f38846a	GET	undefined	/subdir/css/style.css
+20230611	10:26:56	8b29d5fb-6647-4c6f-b962-d8a50ef12a26	GET	undefined	/employees/1
+20230611	10:27:45	60fb32d6-83b1-4207-920f-5e3ae4dba135	GET	undefined	/employees
+20230611	10:29:16	7b766983-2c86-4990-b561-cda9b3afd0ea	POST	undefined	/employees
+20230611	10:29:23	afd0d52a-df24-449a-b922-71c316ba0c50	GET	undefined	/employees
+20230611	10:30:16	de079c68-fe27-4232-8f67-d79f8ec5a0eb	PUT	undefined	/employees
+20230611	10:30:30	3bfd10db-661c-4d59-a963-422517643bf0	PUT	undefined	/employees
+20230611	10:30:45	dc8cf72a-2277-444e-bf3d-30be3b283232	DELETE	undefined	/employees
+20230611	10:31:01	a4406fe0-a497-4426-8a7b-e4269c68a670	GET	undefined	/employees/1
+20230611	10:31:57	80b2b18b-f49b-4d61-b7c3-78245b3c78b9	GET	undefined	/employees/1
+20230611	10:33:47	8b7961ae-1c40-48a9-83ea-c433d3bd6b33	PUT	undefined	/employees
